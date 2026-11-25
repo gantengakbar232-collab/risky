@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const highlights = [
   "QA Engineering",
@@ -34,10 +35,14 @@ export default function About() {
             transition={{ duration: 0.7, delay: 0.1 }}
           >
             <div className="relative w-[280px] h-[280px] rounded-2xl bg-gradient-to-br from-blue-500 via-cyan-400 to-blue-600 p-[3px]">
-              <div className="w-full h-full rounded-2xl bg-[#0a1628] flex items-center justify-center">
-                <span className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent select-none">
-                  RAH
-                </span>
+              <div className="relative w-full h-full rounded-2xl bg-[#0a1628] overflow-hidden">
+                <Image
+                  src="/profile.webp"
+                  alt="M. Risky Akbar Hidayat"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
           </motion.div>
